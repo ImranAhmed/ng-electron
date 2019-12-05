@@ -1,0 +1,42 @@
+[
+    {
+        "name": "App 1",
+        "id": "app-1",
+        "icon": "store",
+        "navigation": [
+            {
+                "name": "App Link 1",
+                "id": "app-link-1",
+                "href": "app-link-1",
+                "icon": "dollar",
+                "children": [
+                    {
+                        "name": "App Link Child 1",
+                        "id": "app-link-child-1",
+                        "href": "app-link-child-1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "App 2",
+        "id": "app-2",
+        "icon": "objects",
+        "navigation": [
+            {
+                "name": "App Link 2",
+                "id": "app-link-2",
+                "href": "app-link-2",
+                "icon": "view-cards",
+                "children": [
+                    {
+                        "name": "App Link Child 2",
+                        "id": "app-link-child-2",
+                        "href": "app-link-child-2"
+                    }
+                ]
+            }
+        ]
+    }
+]

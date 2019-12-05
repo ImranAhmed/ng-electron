@@ -1,0 +1,9 @@
+<clr-dropdown>
+    <button class="nav-icon dropdown-toggle" clrDropdownTrigger>
+        <clr-icon shape="cog"></clr-icon>
+    </button>
+    <clr-dropdown-menu clrPosition="bottom-right">
+        <button type="button" class="dropdown-item" *ngFor="let theme of themes" (click)="setTheme(theme)"
+                clrDropdownItem>{{theme.name}}</button>
+    </clr-dropdown-menu>
+</clr-dropdown>

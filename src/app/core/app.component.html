@@ -1,0 +1,36 @@
+<div class="main-container" *ngIf="activeApp">
+
+  <header class="header-6">
+    <div class="branding">
+      <app-header-branding></app-header-branding>
+    </div>
+
+    <div class="header-nav">
+      <app-header-nav [navigationMenu]="navigationMenu" [activeAppId]="activeApp.id"></app-header-nav>
+    </div>
+
+    <div class="header-actions">
+      <app-header-actions></app-header-actions>
+    </div>
+  </header>
+
+  <div class="content-container" *ngFor="let nav of activeApp.navigation">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-trigger--bottom">
+
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon [attr.shape]="nav.icon" clrVerticalNavIcon></clr-icon>
+        {{nav.name}}
+
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink *ngFor="let c of nav.children">
+            {{c.name}}
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+    </clr-vertical-nav>
+
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
